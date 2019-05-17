@@ -1627,7 +1627,7 @@ abstract class ArcanistWorkflow extends Phobject {
           pht(
             'This feature requires a newer version of Phabricator. Please '.
             'update it using these instructions: %s',
-            'https://secure.phabricator.com/book/phabricator/article/'.
+            ''.PhabricatorEnv::getEnvConfig('phabricator.base-uri').'/book/phabricator/article/'.
               'upgrading/')."\n\n");
       }
       throw $ex;

@@ -170,7 +170,7 @@ EODIFF;
 
       // If these aren't configured, Git complains even if we pass --author.
       $git_name = 'unit-test';
-      $git_email = 'unit-test@phabricator.com';
+      $git_email = 'unit-test@'.PhabricatorEnv::getEnvConfig('phabricator.base-uri').'';
 
       execx(
         'git -c user.name=%s -c user.email=%s commit -m %s',
